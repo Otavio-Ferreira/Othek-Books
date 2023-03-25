@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'font-title';
+  src: url('font/ahganirya-font/AhganiryaPersonalUse-Yznaj.ttf');
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+  background-color: #F2D3AC;
+  animation: fadeIn;
+  animation-duration: 2s;
+}
+main{
+  margin: 20px auto;
+}
+
+.secHome{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  border-bottom: solid 1px #260A07;
+
+}
+
+.quem{
+  font-family: 'font-title';
+  text-align: center;
+  margin: 40px auto;
+  background-color: #260A07;
+  border-radius: 20px;
+  padding: 10px;
+  color: #F2D3AC;
+  width: 80%;
+  font-size: 20px;
+}
+.secHome div{
+  width: 390px;
+  padding: 10px;
+}
+
+.secHome img{
+  width: 350px;
+  display: flex;
+  margin: auto;
+  animation: backInLeft;
+  animation-duration: 1s;
+}
+
+hgroup{
+  text-align: justify;
+}
+hgroup h1{
+  font-size: 50px;
+  color: #e88f3f;
+
+  animation: backInDown;
+  animation-duration: 2s;
+}
+
+.infor{
+  font-size: 22px;
+  text-align: justify;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  background-color: #260A07;
+  color: #F2D3AC;
+}
+
+footer img{
+  width: 100px;
+}
+
+footer div{
+  padding: 10px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link{
+  background-color: #F2D3AC;
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  color: #260A07;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 15px auto;
+}
