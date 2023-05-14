@@ -58,8 +58,8 @@ class Database{
           
           {
             "id": 7,
-            "nome": "Combo: Um Saci no Meu Quintal / A Garupa e Uutros Contos",
-            "preco": "R$20,00",
+            "nome": "Combo: Um Saci no Meu Quintal / A Garupa e Outros Contos",
+            "preco": "R$10,00",
             "situação": "Disponível | Usado",
             "imagem": "imagens/livros/dupla_literarios.jpg",
             "sinopse": "O jovem jornalista Ed Malone não tem ideia do que encontrará nesta viagem exploratória a qual acaba de se candidatar: ir até os confins da América do Sul, junto com um estudioso e um caçador para comprovar a veracidade da teoria do excêntrico professor Challenger – que afirma ter encontrado criaturas pré-históricas criaturas nessas terras longínquas. Será?"
