@@ -165,18 +165,22 @@ class Chamar extends Database{
   }
 
   pesquisar(){
+
     var txt = document.getElementById('pesquisar').value
+    var texto = txt.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toUpperCase().trim().replace(/\s/g, '');
+
     var caixa = document.getElementById('boxLivros')
 
     for (let index = 0; index < this.books.livros.length; index++) {
       const element2 = this.books.livros[index];
+      var nome = element2.nome.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toUpperCase().trim().replace(/\s/g, '');
 
-      if(element2.nome == txt){
+      if(nome == texto){
 
           var construtor = `
               <div class="col mt-3 mb-3">
                 <div class="card h-100 m-auto" style="width: 300px;">
-                  <img src="${element2.nome}" class="card-img-top" alt="">
+                  <img src="${element2.imagem}" class="card-img-top" alt="">
                   <div class="card-body">
                     <h5 class="card-title">${element2.nome}</h5>
                     <p class="card-text">Valor: <strong>${element2.preco}</strong></p>
@@ -208,3 +212,11 @@ class Chamar extends Database{
 }
 
 let chamar = new Chamar()
+
+var search = document.getElementById('pesquisar')
+    
+  search.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        chamar.pesquisar()
+    }
+})
