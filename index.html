@@ -11,12 +11,12 @@
   <link
   rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
-  <header>
-    <nav class="navbar navbar-dark" style="background-color: #260A07;">
+<body onload="chamar.chamarLivrosDestaques()">
+  <header class="bg-light">
+    <nav class="navbar navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">OTHEK BOOKS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <a class="navbar-brand" id="titleHeader" href="#">OTHEK BOOKS</a>
+        <button class="navbar-toggler" style="background-color: #260A07;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #260A07;">
@@ -32,6 +32,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="livros.html">Livros</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sugetoes.html">Sugestões</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -39,17 +42,32 @@
     </nav>
   </header>
   <main>
-    <section class="secHome">
-        <div class="container">
-          <img src="imagens/Logo Streamer Ousado verde Limão e Preto.png" alt="">
+    <section>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/carrosel/car1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/carrosel/car1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/carrosel/car1.png" class="d-block w-100" alt="...">
+          </div>
         </div>
-        <div class="container">
-          <hgroup>
-            <h1>OTHEK <span>BOOKS</span></h1>
-            <h2>Livros Novos e Semi-Novos com um preço acessível</h2>
-            <h4><q>Sem livros, dificilmente se aprende a gostar de ler.</q> - Ruth Rocha</h4>
-          </hgroup>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <h2 class="quem">Veja alguns destaques da loja</h2>
+    <section id="destaquesHome">
+
     </section>
     <h2 class="quem">Quem Somos?</h2>
     <section class="secHome">
@@ -72,6 +90,9 @@
       <img src="imagens/Logo Streamer Ousado verde Limão e Preto.png" alt="">
     </div>
   </footer>
+  
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  
 </body>
 </html>
