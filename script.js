@@ -112,15 +112,10 @@ class Chamar extends Database{
               <a class="btn" style="background-color: #260A07; color: white;" href="https://wa.me/5588981865558?text=Oi%2C+vim+pelo+site%2C+quero+comprar+o+livro+${element.nome}." target="_blank">
                 Comprar
               </a>
-              <button class="btn" style="background-color: #260A07; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <buttom class="btn m-1" style="background-color: #260A07; color: white;" onclick="swal('${element.sinopse}')">
                 Sinopse
-              </button>
+              </buttom>
             </p>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                 ${element.sinopse}
-              </div>
-            </div>
           </div>
         </div>
     </div>`
@@ -135,31 +130,29 @@ class Chamar extends Database{
       const element = this.books.livros[index];
       
       var construtor = `
-      <div class="col mt-3 mb-3">
-        <div class="card h-100 m-auto" style="width: 300px;">
-          <img src="${element.imagem}" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">${element.nome}</h5>
-            <p class="card-text">Valor: <strong>${element.preco}</strong></p>
-            <p class="card-text">Estado: <strong>${element.situação}</strong></p>
-          </div>
-          <div class="card-footer">
-            <p>
-              <a class="btn" style="background-color: #260A07; color: white;" href="https://wa.me/5588981865558?text=Oi%2C+vim+pelo+site%2C+quero+comprar+o+livro+${element.nome}." target="_blank">
-                Comprar
-              </a>
-              <button class="btn" style="background-color: #260A07; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Sinopse
-              </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                 ${element.sinopse}
+            <div class="card mb-3 mt-3" style="max-width: 500px;">
+            <div class="d-flex justify-content-between">
+              <div class="w-25">
+                <img src="${element.imagem}" class="img-fluid m-auto" alt="...">
+              </div>
+              <div class="w-75">
+                <div class="card-body">
+                  <h5 class="card-title">${element.nome}</h5>
+                  <p class="card-text">Valor: <strong>${element.preco}</strong></p>
+                  <p class="card-text">Estado: <strong>${element.situação}</strong></p>
+                </div>
               </div>
             </div>
+            <div class="card-footer d-flex justify-content-center">
+              <a class="btn m-1" style="background-color: #260A07; color: white;" href="https://wa.me/5588981865558?text=Oi%2C+vim+pelo+site%2C+quero+comprar+o+livro+${element.nome}." target="_blank">
+                Comprar
+              </a>
+              <buttom class="btn m-1" style="background-color: #260A07; color: white;" onclick="swal('${element.sinopse}')">
+                Sinopse
+              </buttom>
+            </div>
           </div>
-        </div>
-    </div>`
+        </div>`
       caixa.innerHTML += construtor
     }
   }
@@ -177,32 +170,30 @@ class Chamar extends Database{
 
       if(nome == texto){
 
-          var construtor = `
-              <div class="col mt-3 mb-3">
-                <div class="card h-100 m-auto" style="width: 300px;">
-                  <img src="${element2.imagem}" class="card-img-top" alt="">
-                  <div class="card-body">
-                    <h5 class="card-title">${element2.nome}</h5>
-                    <p class="card-text">Valor: <strong>${element2.preco}</strong></p>
-                    <p class="card-text">Estado: <strong>${element2.situação}</strong></p>
-                  </div>
-                  <div class="card-footer">
-                    <p>
-                      <a class="btn" style="background-color: #260A07; color: white;" href="https://wa.me/5588981865558?text=Oi%2C+vim+pelo+site%2C+quero+comprar+o+livro+${element2.nome}." target="_blank">
-                        Comprar
-                      </a>
-                      <button class="btn" style="background-color: #260A07; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Sinopse
-                      </button>
-                    </p>
-                    <div class="collapse" id="collapseExample">
-                      <div class="card card-body">
-                        ${element2.sinopse}
-                      </div>
-                    </div>
-                  </div>
+        var construtor = `
+          <div class="card mb-3 mt-3" style="max-width: 500px;">
+            <div class="d-flex justify-content-between">
+              <div class="w-25">
+                <img src="${element2.imagem}" class="img-fluid m-auto" alt="...">
+              </div>
+              <div class="w-75">
+                <div class="card-body">
+                  <h5 class="card-title">${element2.nome}</h5>
+                  <p class="card-text">Valor: <strong>${element2.preco}</strong></p>
+                  <p class="card-text">Estado: <strong>${element2.situação}</strong></p>
                 </div>
-            </div>`
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+              <a class="btn m-1" style="background-color: #260A07; color: white;" href="https://wa.me/5588981865558?text=Oi%2C+vim+pelo+site%2C+quero+comprar+o+livro+${element2.nome}." target="_blank">
+                Comprar
+              </a>
+              <buttom class="btn m-1" style="background-color: #260A07; color: white;" onclick="swal('${element2.sinopse}')">
+                Sinopse
+              </buttom>
+            </div>
+          </div>
+        </div>`
             caixa.innerHTML = construtor
         
       }
@@ -212,11 +203,3 @@ class Chamar extends Database{
 }
 
 let chamar = new Chamar()
-
-var search = document.getElementById('pesquisar')
-    
-  search.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        chamar.pesquisar()
-    }
-})
